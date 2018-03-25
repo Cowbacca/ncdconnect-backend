@@ -1,0 +1,25 @@
+type Query {
+  getProfileByUserId(userId: ID!): Profile
+}
+
+type Profile {
+  userId: ID!
+  name: String!
+}
+
+type Mutation {
+  updateProfile(updateProfileInput: UpdateProfileInput!): UpdateProfilePayload!
+}
+
+input UpdateProfileInput {
+    userId: String!
+    update: ProfileUpdate!
+}
+
+input ProfileUpdate {
+    name: String!
+}
+
+type UpdateProfilePayload {
+    updatedProfile: Profile
+}
