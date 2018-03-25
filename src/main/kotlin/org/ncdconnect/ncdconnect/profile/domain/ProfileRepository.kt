@@ -6,5 +6,5 @@ interface ProfileRepository :
     Repository<Profile, String> {
     fun save(profile: Profile): Profile
 
-    fun findByUserId(id: String): Profile?
+    fun findById(id: String): Profile?
 }

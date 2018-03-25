@@ -1,7 +1,7 @@
 package org.ncdconnect.ncdconnect.profile.domain
 
 data class UpdateProfileInput(
-    val userId: String,
+    val id: String,
     val update: ProfileUpdate
 ) {
 

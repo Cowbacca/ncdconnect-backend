@@ -1,9 +1,9 @@
 type Query {
-  getProfileByUserId(userId: ID!): Profile
+  getProfileById(id: ID!): Profile
 }
 
 type Profile {
-  userId: ID!
+  id: ID!
   name: String!
 }
 
@@ -12,7 +12,7 @@ type Mutation {
 }
 
 input UpdateProfileInput {
-    userId: String!
+    id: String!
     update: ProfileUpdate!
 }
 

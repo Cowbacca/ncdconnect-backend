@@ -6,12 +6,12 @@ import javax.persistence.Id
 @Entity
 data class Profile(
     @Id
-    private val userId: String,
+    private val id: String,
     private val name: String
 ) {
     companion object {
         fun createEmpty(userId: String): Profile =
-            Profile(userId = userId, name = "")
+            Profile(id = userId, name = "")
     }
 
     fun update(update: UpdateProfileInput.ProfileUpdate): Profile {

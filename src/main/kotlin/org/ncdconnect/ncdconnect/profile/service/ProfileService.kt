@@ -9,12 +9,12 @@ import javax.transaction.Transactional
 @Service
 @Transactional
 class ProfileService(private val profileRepository: ProfileRepository) {
-    fun getProfileByUserId(userId: String): Profile? = profileRepository.findByUserId(userId)
+    fun getProfileById(userId: String): Profile? = profileRepository.findById(userId)
 
     fun updateProfile(updateProfileInput: UpdateProfileInput): Profile {
         with(updateProfileInput) {
-            val existingProfile = profileRepository.findByUserId(userId) ?: Profile.createEmpty(
-                userId
+            val existingProfile = profileRepository.findById(id) ?: Profile.createEmpty(
+                id
             )
             val updatedProfile = existingProfile.update(update)
             return profileRepository.save(updatedProfile)

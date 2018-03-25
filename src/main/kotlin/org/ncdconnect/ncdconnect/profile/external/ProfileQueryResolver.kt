@@ -8,5 +8,5 @@ import org.springframework.stereotype.Component
 @Component
 class ProfileQueryResolver(private val profileService: ProfileService) :
     GraphQLQueryResolver {
-    fun getProfileByUserId(id: String): Profile? = profileService.getProfileByUserId(id)
+    fun getProfileById(id: String): Profile? = profileService.getProfileById(id)
 }
