@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class NcdconnectApplication
+class NcdConnectApplication
 
 fun main(args: Array<String>) {
-    runApplication<NcdconnectApplication>(*args)
+    runApplication<NcdConnectApplication>(*args)
 }
